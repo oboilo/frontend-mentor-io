@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    /* Colors */
+    /* Primary */
+    --primary--dark-cyan: hsl(158, 36%, 37%);
+    --primary--cream: hsl(30, 38%, 92%);
+
+    /* Neutral */
+    --neutral--very-dark-blue: hsl(212, 21%, 14%);
+    --neutral--dark-grayish-blue: hsl(228, 12%, 48%);
+    --neutral--white: hsl(0, 0%, 100%);
+
+    /* Typography */
+    --font-size: 14px;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Fraunces', serif; */
+    background-color: var(--primary--cream);
+    width: 100%;
+    height: 100vh;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    max-width: 900px;
+    max-height: 900px;
+    margin-inline: auto;
+}
+
+.card_img-mobile {
+    display: none;
+}
+
+.img-wrap {}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* .img-wrap {
+    position: relative;
+    padding-bottom: 100%;
+    height: 0;
+}
+
+.img-wrap img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+.card_body {
+    color: var(--neutral--very-dark-blue);
+    height: 100%;
+    padding: 2rem;
+}
+
+.btn-main {
+    background-color: var(--primary--dark-cyan) !important;
+    color: var(--neutral--white);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.img_wrapper {}
+
+/* Attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* .bg-primary {
+    background: var(--primary--cream) !important;
+} */
+
+/* .bg-primary {
+    background-color: red;
+    background: red;
+} */
+
+/* Responsive Design */
+@media only screen and (max-width: 991px) {
+    .card {
+        max-height: none;
+        max-width: 80vw;
+    }
+
+    .card_img-desktop {
+        display: none;
+    }
+
+    .card_img-mobile {
+        display: block;
+    }
+
+    .card_body {
+        padding: 1.25rem;
+    }
+}
