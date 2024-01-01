@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
 
 :root {
@@ -6,6 +6,7 @@
     /* Primary */
     --primary--dark-cyan: hsl(158, 36%, 37%);
     --primary--cream: hsl(30, 38%, 92%);
+    --primary--btn-hover: #1A4131;
 
     /* Neutral */
     --neutral--very-dark-blue: hsl(212, 21%, 14%);
@@ -14,12 +15,13 @@
 
     /* Typography */
     --font-size: 14px;
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-fraunces: 'Fraunces', serif;
 }
 
 body {
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    /* font-family: 'Fraunces', serif; */
+    font-family: var(--font-montserrat);
     background-color: var(--primary--cream);
     width: 100%;
     height: 100vh;
@@ -36,8 +38,8 @@ body {
 }
 
 .card {
-    max-width: 900px;
-    max-height: 900px;
+    max-width: 700px;
+    max-height: 600px;
     margin-inline: auto;
 }
 
@@ -45,7 +47,9 @@ body {
     display: none;
 }
 
-.img-wrap {}
+.img-wrap {
+    max-height: 600px;
+}
 
 .card img {
     width: 100%;
@@ -74,6 +78,38 @@ body {
     padding: 2rem;
 }
 
+/* Typography */
+.card_body span {
+    color: var(--neutral--dark-grayish-blue);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: small;
+    opacity: .75;
+}
+
+h1 {
+    font-family: var(--font-fraunces);
+    line-height: 110%;
+}
+
+.card_body p {
+    color: var(--neutral--dark-grayish-blue);
+    opacity: .75;
+    line-height: 130%;
+}
+
+.price {
+    color: var(--primary--dark-cyan);
+    font-family: var(--font-fraunces);
+    font-size: 2.5rem;
+}
+
+.price-old {
+    color: var(--neutral--dark-grayish-blue);
+    text-decoration-line: line-through;
+    font-weight: 300;
+}
+
 .btn-main {
     background-color: var(--primary--dark-cyan) !important;
     color: var(--neutral--white);
@@ -84,7 +120,10 @@ body {
     align-items: center;
 }
 
-.img_wrapper {}
+.btn-main:hover {
+    background-color: var(--primary--btn-hover) !important;
+    color: var(--neutral--white);
+}
 
 /* Attribution */
 .attribution {
@@ -122,5 +161,11 @@ body {
 
     .card_body {
         padding: 1.25rem;
+    }
+
+    .page-wrapper {
+        height: auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
 }
