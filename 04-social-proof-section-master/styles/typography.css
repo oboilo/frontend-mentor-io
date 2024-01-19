@@ -1,0 +1,7 @@
+@import url(./colors.css);
+
+h1 {
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--primary--very-dark-magenta);
+}
